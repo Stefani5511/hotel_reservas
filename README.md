@@ -9,11 +9,10 @@ Sistema web para gerenciamento de quartos e reservas de um hotel. O sistema perm
 ## Front-end
 - HTML
 - CSS
-- JavaScript (Vanilla)
+- JavaScript
 
 ## Back-end
 - Node.js
-- Express
 
 ## Banco de Dados
 - MySQL
@@ -41,5 +40,52 @@ Sistema web para gerenciamento de quartos e reservas de um hotel. O sistema perm
 
 ---
 
-# 📦 Estrutura do projeto
+# Prints das telas
 
+Os prints abaixo demonstram o funcionamento do sistema:
+
+## Tela inicial (Quartos cadastrados)
+- Exibe a listagem de quartos
+- Permite acessar reservas e excluir quartos
+
+📁 wireframes/home.png
+
+---
+
+## Cadastro de quarto
+- Adiciona novos quartos
+
+📁 wireframes/cadastro_quarto.png
+
+---
+
+# Passo a passo de execução do projeto
+
+## 1. Clonar o repositório
+
+---
+
+## 2. Instalar dependências do backend
+
+cd api
+npm init -y
+npm install express cors mysql2 @prisma/client
+
+---
+
+## 3. Configurar banco de dados
+
+Configurar arquivo .env
+
+---
+
+## 4. Prisma (configuração do banco)
+
+npx prisma generate
+npx prisma migrate dev
+
+---
+
+## 5. Iniciar servidor backend
+
+npm run dev
