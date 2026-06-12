@@ -65,9 +65,9 @@ Os prints abaixo demonstram o funcionamento do sistema:
 
 ## 2. Instalar dependências do backend
 
-cd api
-npm init -y
-npm install express cors mysql2 @prisma/client
+- cd api
+- npm init -y
+- npm install express cors mysql2 @prisma/client
 
 ## 3. Configurar banco de dados
 
@@ -75,8 +75,8 @@ Configurar arquivo .env
 
 ## 4. Prisma (configuração do banco)
 
-npx prisma generate
-npx prisma migrate dev
+- npx prisma generate
+- npx prisma migrate dev
 
 ## 5. Iniciar servidor backend
 
