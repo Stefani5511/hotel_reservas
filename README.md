@@ -28,9 +28,9 @@ Sistema web para gerenciamento de quartos e reservas de um hotel. O sistema perm
 
 ---
 
-# SGBD e versão
+# SGBD
 
-- MySQL 8.0
+- MySQL
 
 ---
 
@@ -48,14 +48,14 @@ Os prints abaixo demonstram o funcionamento do sistema:
 - Exibe a listagem de quartos
 - Permite acessar reservas e excluir quartos
 
-📁 wireframes/home.png
+![Tela inicial](wireframes/home.png)
 
 ---
 
 ## Cadastro de quarto
 - Adiciona novos quartos
 
-📁 wireframes/cadastro_quarto.png
+![Tela inicial](wireframes/cadastro_quarto.png)
 
 ---
 
@@ -63,28 +63,20 @@ Os prints abaixo demonstram o funcionamento do sistema:
 
 ## 1. Clonar o repositório
 
----
-
 ## 2. Instalar dependências do backend
 
 cd api
 npm init -y
 npm install express cors mysql2 @prisma/client
 
----
-
 ## 3. Configurar banco de dados
 
 Configurar arquivo .env
-
----
 
 ## 4. Prisma (configuração do banco)
 
 npx prisma generate
 npx prisma migrate dev
-
----
 
 ## 5. Iniciar servidor backend
 
