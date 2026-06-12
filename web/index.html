@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="./assets/logo.avif" alt="Logo">
+                <div class="logo-text">
+                    <p>Hotel</p>
+                    <p>Reservas</p>
+                </div>
+            </div>
+            <nav class="menu">
+                <button id="btnMenuQuartos" class="menu-item">
+                    <img src="./assets/quartos.jpg" alt="Quartos">Quartos
+                </button>
+                <button id="btnMenuReservas" class="menu-item">
+                    <img src="./assets/reservas.webp" alt="Reservas">Reservas
+                </button>
+                <button id="btnMenuSobre" class="menu-item">
+                    <img src="./assets/sobre.jpg" alt="Sobre">Sobre
+                </button>
+            </nav>
+        </aside>
+        <main class="content">
+            <section id="telaQuartos" class="screen">
+                <div class="page-header">
+                    <div>
+                        <h1>Quartos Cadastrados</h1>
+                        <p>Gerencie os quartos do hotel</p>
+                    </div>
+                    <button id="btnNovoQuarto" class="btn btn-primary">Novo Quarto</button>
+                </div>
+                <div class="card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nº Quarto</th>
+                                <th>Tipo</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaQuartos"></tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="telaCadastroQuarto" class="screen">
+                <div class="form-container">
+                    <h2>Cadastro de Quarto</h2>
+                    <p>Informe os dados do quarto</p>
+                    <form id="formQuarto">
+                        <div class="form-group">
+                            <label>Número do Quarto</label>
+                            <input type="text" id="numeroQuarto" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo do Quarto</label>
+                            <select id="tipoQuarto" required>
+                                <option value=""></option>
+                                <option value="Standard">Standard</option>
+                                <option value="Luxo">Luxo</option>
+                                <option value="Suite">Suite</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Cadastrar</button>
+                        <button type="button" id="voltarQuarto" class="btn btn-secondary">Voltar</button>
+                    </form>
+                </div>
+            </section>
+            <section id="telaReservas" class="screen">
+                <div class="page-header">
+                    <div>
+                        <h1 id="tituloQuarto"></h1>
+                        <p id="subtituloQuarto"></p>
+                    </div>
+                    <button id="btnNovaReserva" class="btn btn-primary">Nova Reserva</button>
+                </div>
+                <div class="card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Hóspede</th>
+                                <th>Entrada</th>
+                                <th>Saída</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaReservas"></tbody>
+                    </table>
+                </div>
+                <button id="voltarReservas" class="btn btn-secondary">Voltar</button>
+            </section>
+            <section id="telaCadastroReserva" class="screen">
+                <div class="form-container">
+                    <h2>Cadastro de Reserva</h2>
+                    <p id="infoQuarto"></p>
+                    <form id="formReserva">
+                        <input type="hidden" id="quartoId">
+                        <div class="form-group">
+                            <label>Hóspede</label>
+                            <input type="text" id="hospede" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Data Entrada</label>
+                            <input type="date" id="dataEntrada" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Data Saída</label>
+                            <input type="date" id="dataSaida" required>
+                        </div>
+                        <button class="btn btn-primary">Cadastrar Reserva</button>
+                        <button type="button" id="voltarReserva" class="btn btn-secondary">Voltar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div id="modalQuarto" class="modal">
+        <div class="modal-box">
+            <button class="close-modal">X</button>
+            <h2>Excluir Quarto</h2>
+            <p>Deseja realmente excluir este quarto?</p>
+            <button id="confirmarExcluirQuarto" class="btn btn-danger">Excluir</button>
+            <button id="cancelarExcluirQuarto" class="btn btn-secondary">Cancelar</button>
+        </div>
+    </div>
+    <div id="modalReserva" class="modal">
+        <div class="modal-box">
+            <button class="close-modal">X</button>
+            <h2>Excluir Reserva</h2>
+            <p>Deseja realmente excluir esta reserva?</p>
+            <button id="confirmarExcluirReserva" class="btn btn-danger">Excluir</button>
+            <button id="cancelarExcluirReserva" class="btn btn-secondary">Cancelar</button>
+        </div>
+    </div>
+    <input type="hidden" id="quartoExcluirId">
+    <input type="hidden" id="reservaExcluirId">
+
+    <script src="script.js"></script>
+
+</body>
+</html>
